@@ -416,33 +416,55 @@
 			</footer>
 <div class="backdrop is-hidden" data-modal>
 	<div class="modal">
-		<button class="modalbutton" type="button" data-modal-close><svg class="close-btn" width="30" height="30">
-			<use href="./images/icons.svg#icon-close-black-18dp-2-1" width="18" height="18" x="5px" y="5px"></use>
-			</svg></button>
-			<div>
-			<h1 class="formtittle">Zostaw swoje dane w formularzu poniżej</h1>
-			<form name="contactdetails">
-				<label class="usernamelabel" for="username">Imie</label>
-				<input class="text" type="text" name="imie" id="username" />
-				<label class="usernamelabel" for="userphone">Telefon</label>
-				<input class="tel" type="tel" name="telefon" id="userphone" />
-				<label class="usernamelabel" for="usermail">Email</label>
-				<input class="email" type="email" name="email" id="usermail" />
-				<label class="usernamelabel" for="feedback">Komentarz</label>
-				<textarea class="feedback" name="komentarz" id="feedback" rows="6"></textarea>
-			<div class="checkpolicy">
-				<input class="checkbox" type="checkbox" name="" value="accept">Oświadczam iż akceptuję&nbsp;<a class="statute" href="#">Regulamin</a>&nbsp;i&nbsp;<a class="policy" href="#">Politykę Prywatności.</a>
-</div>
-			<button class="send" type="submit">Wyślij</button>
+		<button class="modalbutton" type="button" data-modal-close>
+			<svg class="close-btn">
+				<use href="./images/icons.svg#icon-close-black-18dp-2-1" width="18" height="18" x="5px" y="5px"></use>
+			</svg>
+		</button>
 
-				</form>
+				<p class="modaltittle">Zostaw swoje dane w formularzu poniżej</p>
+			
+			<form class="myform">
+				<fieldset class="fieldset">
+				<label class="label" for="username">Imię</label>
+					<svg class="icon">
+						<use href="./images/icons.svg#icon-person-black-18dp"></use>
+					</svg>
+				<input class="input" type="text" name="imie" id="username" />
+				</fieldset>
+				<fieldset class="fieldset">
+					<label class="label" for="userphone">Telefon</label>
+						<svg class="icon">
+							<use href="./images/icons.svg#icon-phone-black-18dp"></use>
+						</svg>
+					<input class="input" type="tel" name="telefon" id="userphone" />
+					</fieldset>
+					<fieldset class="fieldset">
+						<label class="label" for="usermail">Email</label>
+							<svg class="icon">
+								<use href="./images/icons.svg#icon-email-black-18dp"></use>
+							</svg>
+						<input class="input" type="email" name="email" id="usermail" />
+						</fieldset>
 
-
-
+						<fieldset class="fieldset2">
+							<label class="label" for="feedback">Komentarz</label>
+							<textarea class="feedback" placeholder="Wprowadź tekst" name="komentarz" id="feedback" rows="5"></textarea>
+						</fieldset>
+<label class="legal-checkbox">
+	<input class="checkbox2" type="checkbox"/>
+	   <span>
+		   <svg>
+			<use href="./images/icons.svg#icon-icon-check"></use>
+		   </svg> Oświadczam iż akceptuję <a class="statute" href="#">Regulamin</a> i
+					<a class="policy" href="#">Politykę Prywatności.</a>
+	   </span>
+  </label>
+  <button class="send" type="submit">Wyślij</button>
 			</form>
-			</div>
-	</div>
-</div>
+			
+	</div> <!-- koniec div modal -->
+</div> <!-- koniec div backdrop -->
 
 
 

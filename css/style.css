@@ -752,7 +752,7 @@ body {
 /* Okno modalne: */
 
 .backdrop {
-	/* display: flex; */
+	display: flex;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -761,7 +761,7 @@ body {
 	background-color: rgba(0 0 0 / 0.5);
 	transition: transform 0.25s;
 }
-.check {
+/* .check {
 	display: block;
 	font-weight: 400;
 	font-size: 14px;
@@ -776,37 +776,31 @@ body {
 	letter-spacing: 0.03em;
 }
 .checkbox {
-	margin-left: 55px;
+	margin-left: 54px;
 	margin-right: 8px;
 	font-family: Roboto;
 	color: var(--brand-color6);
-}
+} */
 .close-btn {
 	position: absolute;
 	cursor: pointer;
 	border-radius: 50%;
+	width: 30px;
+	height: 30px;
 	top: 8px;
 	right: 8px;
 	background: var(--brand-color3);
 	border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* .contactdetails {
-	display: flex;
-	flex-direction: column;
-	
-} */
-
 .feedback {
 	display: flex;
-	padding-left: 8px;
+	border: none;
+	/* padding-left: 8px;
 	padding-right: 8px;
-	padding-block: 4px;
-	width: 448px;
-	margin-left: 40px;
-	margin-bottom: 20px;
-	border: 1px solid rgba(33, 33, 33, 0.2);
-	border-radius: 4px;
+	padding-block: 4px; */
+	width: 416px;
+	height: 96px;
 }
 .formtittle {
 	padding-top: 40px;
@@ -828,6 +822,7 @@ body {
 
 .modal {
 	display: flex;
+	flex-direction: column;
 	position: relative;
 	width: 528px;
 	height: 581px;
@@ -837,31 +832,32 @@ body {
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
 		0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
-	flex-direction: column;
-}
-.modalbutton {
-	border: none;
 }
 
-.text,
-.tel,
-.email {
-	padding-block: 10px;
-	padding-left: 8px;
-	padding-right: 8px;
-	width: 448px;
-	margin-left: 40px;
-	margin-bottom: 10px;
-	border: 1px solid rgba(33, 33, 33, 0.2);
-	border-radius: 4px;
+.modalbutton {
+	/* position: absolute; */
+	display: block;
+	border: none;
+	width: 0;
+	height: 0;
+}
+
+.legal-checkbox {
+	position: relative;
+	margin-left: 79px;
+	font-family: Roboto;
+	font-size: 14px;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+	color: var(--brand-color6);
 }
 
 .statute,
 .policy {
 	font-weight: 400;
-	/* font-size: 14px;
+	font-size: 14px;
 	line-height: 1.71;
-	letter-spacing: 0.03em; */
+	letter-spacing: 0.03em;
 	color: var(--brand-color1);
 }
 
@@ -882,14 +878,113 @@ body {
 	letter-spacing: 0.06em;
 	color: var(--brand-color3);
 }
-.usernamelabel {
+
+.fieldset {
 	display: flex;
-	flex-direction: column;
-	padding-bottom: 4px;
-	padding-left: 40px;
+	position: relative;
+	align-items: center;
+	padding-left: 37px;
+	/* padding-right: 37px; */
+	margin-left: 40px;
+	margin-right: 40px;
+	padding-block: 7px;
+	margin-bottom: 28px;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+}
+.fieldset2 {
+	display: flex;
+	position: relative;
+	/* flex-direction: column; */
+	align-items: center;
+	width: 422px;
+	margin-left: 40px;
+	/* margin-right: 40px; */
+	margin-bottom: 20px;
+	padding-block: 11px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+}
+.fieldset2 ::placeholder {
 	font-family: Roboto;
 	font-size: 12px;
-	line-height: 1.17;
+	line-height: 1.16;
 	letter-spacing: 0.01em;
-	color: var(--brand-color6);
+	color: rgba(117, 117, 117, 0.5);
+}
+
+.myform .icon {
+	width: 18px;
+	height: 18px;
+	fill: var(--brand-color5);
+	position: absolute;
+	left: 15px;
+}
+
+.myform .label {
+	position: absolute;
+	top: -16px;
+	left: 0px;
+	font-family: Roboto;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 1.16;
+	letter-spacing: 0.01em;
+	color: #757575;
+}
+.fieldset:has(input:focus) {
+	border-color: var(--brand-color1);
+}
+.fieldset2:has(textarea:focus) {
+	border-color: var(--brand-color1);
+}
+.fieldset:has(input:focus) .icon {
+	fill: var(--brand-color1);
+}
+
+.legal-checkbox input {
+	display: none;
+	pointer-events: none;
+}
+
+.input {
+	border: none;
+	background-color: transparent;
+	width: 400px;
+}
+.myform .input:focus {
+	outline: 0;
+}
+
+.myform .feedback:focus {
+	outline: 0;
+}
+
+.legal-checkbox svg {
+	position: absolute;
+	width: 16px;
+	height: 15px;
+	fill: transparent;
+	border: solid 2px var(--brand-color5);
+	border-radius: 2px;
+	left: -25px;
+	top: 0.5px;
+}
+
+.myform:has(.legal-checkbox input:checked) span svg {
+	border: none;
+	fill: var(--brand-color1);
+}
+.modaltittle {
+	padding-top: 40px;
+	padding-bottom: 30px;
+	text-align: center;
+	font-family: Roboto;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 1.15;
+	letter-spacing: 0.03em;
+	color: var(--brand-color5);
 }
