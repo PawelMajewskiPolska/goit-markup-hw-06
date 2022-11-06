@@ -761,26 +761,7 @@ body {
 	background-color: rgba(0 0 0 / 0.5);
 	transition: transform 0.25s;
 }
-/* .check {
-	display: block;
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 1.71;
-	letter-spacing: 0.03em;
-}
-.checkpolicy {
-	font-family: Roboto;
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 1.71;
-	letter-spacing: 0.03em;
-}
-.checkbox {
-	margin-left: 54px;
-	margin-right: 8px;
-	font-family: Roboto;
-	color: var(--brand-color6);
-} */
+
 .close-btn {
 	position: absolute;
 	cursor: pointer;
@@ -796,9 +777,6 @@ body {
 .feedback {
 	display: flex;
 	border: none;
-	/* padding-left: 8px;
-	padding-right: 8px;
-	padding-block: 4px; */
 	width: 416px;
 	height: 96px;
 }
@@ -813,11 +791,30 @@ body {
 	text-align: center;
 	font-style: normal;
 }
+.iconsend {
+	position: absolute;
+	top: 13px;
+	right: 28px;
+}
+.input {
+	border: none;
+	background-color: transparent;
+	width: 400px;
+}
 .is-hidden {
 	transform: translateX(-100%);
 	visibility: hidden;
 	opacity: 0;
 	pointer-events: none;
+}
+.legal-checkbox {
+	position: relative;
+	margin-left: 79px;
+	font-family: Roboto;
+	font-size: 14px;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+	color: var(--brand-color6);
 }
 
 .modal {
@@ -835,21 +832,151 @@ body {
 }
 
 .modalbutton {
-	/* position: absolute; */
 	display: block;
 	border: none;
 	width: 0;
 	height: 0;
 }
 
-.legal-checkbox {
+.fieldset {
+	display: flex;
 	position: relative;
-	margin-left: 79px;
+	align-items: center;
+	padding-left: 37px;
+	margin-left: 40px;
+	margin-right: 40px;
+	padding-block: 7px;
+	margin-bottom: 28px;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+}
+.fieldset2 {
+	display: flex;
+	position: relative;
+	align-items: center;
+	width: 422px;
+	margin-left: 40px;
+	margin-bottom: 20px;
+	padding-block: 11px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+}
+.fieldset3 {
+	display: flex;
+	align-items: center;
+	width: 358px;
+	padding-block: 14px;
+	margin-right: 12px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+	border-radius: 4px;
+}
+
+.fieldset3 .input:focus {
+	outline: 0;
+}
+
+.fieldset3 .input {
+	width: 300px;
+	color: var(--brand-color3);
+}
+
+.fieldset2 ::placeholder {
 	font-family: Roboto;
-	font-size: 14px;
-	line-height: 1.71;
+	font-size: 12px;
+	line-height: 1.16;
+	letter-spacing: 0.01em;
+	color: rgba(117, 117, 117, 0.5);
+}
+.fieldset3 ::placeholder {
+	font-family: Roboto;
+	font-size: 16px;
+	line-height: 20px;
 	letter-spacing: 0.03em;
-	color: var(--brand-color6);
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.fieldset:has(input:focus) {
+	border-color: var(--brand-color1);
+}
+.fieldset2:has(textarea:focus) {
+	border-color: var(--brand-color1);
+}
+.fieldset:has(input:focus) .icon {
+	fill: var(--brand-color1);
+}
+.legal-checkbox input {
+	display: none;
+	pointer-events: none;
+}
+
+.legal-checkbox svg {
+	position: absolute;
+	width: 16px;
+	height: 15px;
+	fill: transparent;
+	border: solid 2px var(--brand-color5);
+	border-radius: 2px;
+	left: -25px;
+	top: 0.5px;
+}
+.label2 {
+	padding-left: 15px;
+}
+
+.myform .icon {
+	width: 18px;
+	height: 18px;
+	fill: var(--brand-color5);
+	position: absolute;
+	left: 15px;
+}
+
+.myform .input:focus {
+	outline: 0;
+}
+
+.myform .feedback:focus {
+	outline: 0;
+}
+.myform .label {
+	position: absolute;
+	top: -16px;
+	left: 0px;
+	font-family: Roboto;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 1.16;
+	letter-spacing: 0.01em;
+	color: #757575;
+}
+
+.myform:has(.legal-checkbox input:checked) span svg {
+	border: none;
+	fill: var(--brand-color1);
+}
+.modaltittle {
+	padding-top: 40px;
+	padding-bottom: 30px;
+	text-align: center;
+	font-family: Roboto;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 1.15;
+	letter-spacing: 0.03em;
+	color: var(--brand-color5);
+}
+.newsletter {
+	margin-left: 78px;
+	padding-top: 72px;
+}
+.newsletter2 {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 .statute,
@@ -878,113 +1005,29 @@ body {
 	letter-spacing: 0.06em;
 	color: var(--brand-color3);
 }
-
-.fieldset {
-	display: flex;
-	position: relative;
-	align-items: center;
-	padding-left: 37px;
-	/* padding-right: 37px; */
-	margin-left: 40px;
-	margin-right: 40px;
-	padding-block: 7px;
-	margin-bottom: 28px;
-	border: 1px solid rgba(33, 33, 33, 0.2);
-	border-radius: 4px;
-}
-.fieldset2 {
-	display: flex;
-	position: relative;
-	/* flex-direction: column; */
-	align-items: center;
-	width: 422px;
-	margin-left: 40px;
-	/* margin-right: 40px; */
-	margin-bottom: 20px;
-	padding-block: 11px;
-	padding-left: 15px;
-	padding-right: 15px;
-	border: 1px solid rgba(33, 33, 33, 0.2);
-	border-radius: 4px;
-}
-.fieldset2 ::placeholder {
-	font-family: Roboto;
-	font-size: 12px;
-	line-height: 1.16;
-	letter-spacing: 0.01em;
-	color: rgba(117, 117, 117, 0.5);
-}
-
-.myform .icon {
-	width: 18px;
-	height: 18px;
-	fill: var(--brand-color5);
-	position: absolute;
-	left: 15px;
-}
-
-.myform .label {
-	position: absolute;
-	top: -16px;
-	left: 0px;
-	font-family: Roboto;
-	font-weight: 400;
-	font-size: 12px;
-	line-height: 1.16;
-	letter-spacing: 0.01em;
-	color: #757575;
-}
-.fieldset:has(input:focus) {
-	border-color: var(--brand-color1);
-}
-.fieldset2:has(textarea:focus) {
-	border-color: var(--brand-color1);
-}
-.fieldset:has(input:focus) .icon {
-	fill: var(--brand-color1);
-}
-
-.legal-checkbox input {
-	display: none;
-	pointer-events: none;
-}
-
-.input {
+.send2 {
+	background: var(--brand-color1);
 	border: none;
-	background-color: transparent;
-	width: 400px;
-}
-.myform .input:focus {
-	outline: 0;
-}
-
-.myform .feedback:focus {
-	outline: 0;
-}
-
-.legal-checkbox svg {
-	position: absolute;
-	width: 16px;
-	height: 15px;
-	fill: transparent;
-	border: solid 2px var(--brand-color5);
-	border-radius: 2px;
-	left: -25px;
-	top: 0.5px;
-}
-
-.myform:has(.legal-checkbox input:checked) span svg {
-	border: none;
-	fill: var(--brand-color1);
-}
-.modaltittle {
-	padding-top: 40px;
-	padding-bottom: 30px;
-	text-align: center;
+	position: relative;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
 	font-family: Roboto;
 	font-weight: 700;
-	font-size: 20px;
-	line-height: 1.15;
+	font-size: 16px;
+	line-height: 1.87;
+	letter-spacing: 0.06em;
+	color: var(--brand-color3);
+	padding-block: 10px;
+	padding-left: 42px;
+	padding-right: 76px;
+}
+.signup {
+	font-family: Roboto;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.14;
 	letter-spacing: 0.03em;
-	color: var(--brand-color5);
+	text-transform: uppercase;
+	color: #ffffff;
+	padding-bottom: 20px;
 }
