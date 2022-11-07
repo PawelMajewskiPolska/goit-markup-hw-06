@@ -136,7 +136,8 @@ body {
 .customerborder {
 	border: 1px solid var(--brand-color8); /* dodać do var */
 	border-radius: 4px;
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customerborder:hover {
 	border-color: var(--brand-color1);
@@ -310,7 +311,6 @@ body {
 .icon-facebook1,
 .icon-linkedin1 {
 	fill: var(--brand-color8);
-	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-antenna1,
@@ -328,9 +328,6 @@ body {
 .icon-logo4,
 .icon-logo5 {
 	fill: var(--brand-color8);
-	/* border: 1px solid var(--brand-color8);
-	border-radius: 4px; */
-	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .job {
 	display: flex;
@@ -379,9 +376,6 @@ body {
 	color: var(--brand-color3);
 	text-align: center;
 	padding-block: 27px;
-	/* position: absolute;
-	top: 251px;
-	left: 90px; */
 }
 .joinus {
 	font-size: 14px;
@@ -668,8 +662,9 @@ body {
 	color: var(--brand-color3);
 }
 
-.social {
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.social svg {
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social:hover svg {
