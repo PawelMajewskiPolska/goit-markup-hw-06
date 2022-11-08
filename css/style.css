@@ -663,6 +663,7 @@ body {
 }
 
 .social svg {
+	border-radius: 50%;
 	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
 		background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -670,7 +671,6 @@ body {
 .social:hover svg {
 	fill: var(--brand-color3);
 	background-color: var(--brand-color1);
-	border-radius: 50%;
 }
 .sociallinks {
 	display: flex;
@@ -749,6 +749,8 @@ body {
 .backdrop {
 	display: flex;
 	position: fixed;
+	align-items: center;
+	justify-content: center;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -822,8 +824,6 @@ body {
 	flex-direction: column;
 	position: relative;
 	width: 528px;
-	height: 581px; /* jak usuwam height to modal rozjeżdza się w dół Mógłbym prosić o wskazówki ?*/
-	top: 221px;
 	margin: 0 auto;
 	background-color: var(--brand-color3);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
